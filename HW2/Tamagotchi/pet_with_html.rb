@@ -23,23 +23,24 @@ class Pet
     puts 'It is coming from the bushes behind you!'
     puts 'Do you want to check it out? (Yes/No)'
     answer = gets.chomp.capitalize
-    if answer == 'Yes'
+    case answer
+    when 'Yes'
       puts 'You walk up to the bushes and...'
-      puts "You found a dog."
-      @health  = 50 + rand(40)
-      @hunger  = 50 + rand(40)
-      @hygiene = 50 + rand(40)
-      @fun     = 50 + rand(40)
+      puts 'You found a dog.'
+      @health  = rand(50..89)
+      @hunger  = rand(50..89)
+      @hygiene = rand(50..89)
+      @fun     = rand(50..89)
       name_pet
       Pet.menu
       Pet.status(@name)
-    elsif answer == 'No'
+    when 'No'
       puts 'You start to walk away but something starts to follow you.'
-      puts "You turn around and see a dog looking at you sadly because of your choose."
-      @health  = 30 + rand(20)
-      @hunger  = 30 + rand(20)
-      @hygiene = 30 + rand(20)
-      @fun     = 30 + rand(20)
+      puts 'You turn around and see a dog looking at you sadly because of your choose.'
+      @health  = rand(30..49)
+      @hunger  = rand(30..49)
+      @hygiene = rand(30..49)
+      @fun     = rand(30..49)
       name_pet
       Pet.menu
       Pet.status(@name)
@@ -64,57 +65,56 @@ class Pet
   def self.care
     while alive
       answer2 = gets.chomp.capitalize
-      if answer2=="Exit"
-        break
-      end  
-      if answer2 == '1'
+      break if answer2 == 'Exit'
+
+      case answer2
+      when '1'
         Pet.clean
         puts 'You clean your pet.'
         Pet.status(@name)
         Pet.time_pass
-        
 
-      elsif answer2 == '2'
+      when '2'
         Pet.feed
         puts 'Your feed your pet.'
         Pet.status(@name)
         Pet.time_pass
-        
-      elsif answer2 == '3'
+
+      when '3'
         Pet.play
         puts 'You play with your pet.'
         Pet.status(@name)
         Pet.time_pass
 
-      elsif answer2 == '4'
+      when '4'
         Pet.walk
         puts 'You walk with your pet.'
         Pet.status(@name)
         Pet.time_pass
 
-      elsif answer2 == '5'
+      when '5'
         Pet.vet
         puts 'You take your pet to the vet.'
         Pet.status(@name)
         Pet.time_pass
 
-      elsif answer2 == '6'
+      when '6'
         Pet.look
         puts 'You look at your pet.'
         Pet.status(@name)
         Pet.time_pass
 
-      elsif answer2 == 'Help'
+      when 'Help'
         Pet.menu
         Pet.status(@name)
 
-      elsif answer2 == 'B'
+      when 'B'
         system('open ./index.html')
       else
         puts 'Invalid input. Try again.'
       end
+    end
   end
-end
 
   def self.name_pet
     puts 'What do you you wanna name your pet?'
@@ -130,23 +130,23 @@ end
   end
 
   def self.alive
-    @health > 0
-    end
+    @health.positive?
+  end
 
   def self.feed
     @hunger  += rand(15)
     @health  += rand(5)
     @hygiene -= rand(10)
-    end
+  end
 
   def self.play
     @fun     += rand(15)
     @health  -= rand(10)
     @hygiene -= 5
-      if @hygiene < 0
-        @health   = 0
-      end
-    end
+    return unless @hygiene.negative?
+
+    @health   = 0
+  end
 
   def self.clean
     @hygiene += rand(20)
@@ -173,45 +173,37 @@ end
     @hygiene -= rand(5)
     @fun     -= rand(5)
   end
-  
-  private
 
   def self.time_pass
     @hygiene -= rand(10)
-    if @hygiene < 0
-      @health   = 0
-    end
+    @health   = 0 if @hygiene.negative?
     @fun -= rand(10)
-    if @fun   < 0
-      @health = 0
-    end
+    @health = 0 if @fun.negative?
     @hunger -= rand(10)
-    if @hunger < 0
-      @health  = 0
-    end
+    @health  = 0 if @hunger.negative?
     @health -= rand(10)
-    KraVs.save(info_html, bypass_html: true)
-    if @health >=80
+    KraVs.save(info_html, file_name: 'index.html', bypass_html: true)
+    if @health >= 80
       @health_unicode_status = '&#128522;'
     elsif @health <= 50
       @health_unicode_status = '&#128528;'
     elsif @health <= 30
       @health_unicode_status = '&#9785;'
-    elsif  @health =0
+    elsif @health.zero?
       @health_unicode_status = '&#9760;'
     end
-    end
   end
+end
 
-  def info_html
-    <<~HTML
-      <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Name:                    #{@name}</p>
-      <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Health:                  #{@health}</p>
-      <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Hunger:                  #{@hunger}</p>
-      <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Hygiene:                 #{@hygiene}</p>
-      <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Fun:                     #{@fun}</p>
-      <p style="text-align: center; font-size: 64px">#{@health_unicode_status}</p>
-    HTML
+def info_html
+  <<~HTML
+    <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Name:                    #{@name}</p>
+    <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Health:                  #{@health}</p>
+    <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Hunger:                  #{@hunger}</p>
+    <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Hygiene:                 #{@hygiene}</p>
+    <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Fun:                     #{@fun}</p>
+    <p style="text-align: center; font-size: 64px">#{@health_unicode_status}</p>
+  HTML
 end
 
 class Game
@@ -221,4 +213,4 @@ class Game
   end
 end
 
-Game.new  
+Game.new
