@@ -22,7 +22,7 @@ puts 'видалити всі непарні числа'
 puts array.delete_if(&:odd?)
 
 puts 'залишити тільки ті числа, які без остачі ділятся на 3'
-puts array.find_all{ |elem| elem % 3 == 0 }
+puts array.find_all{ |elem| (elem % 3).zero? }
 
 puts 'видалити з масиву числа, які повторюються'
 puts array.uniq
