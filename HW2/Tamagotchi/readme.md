@@ -6,7 +6,7 @@
    3. Play with your pet
    4. Walk with your pet
    5. Take your pet to the vet
-   6. Look at your pet and
-   7. Look at your options
-   8. Exit the game
-   9. Open in browser"
+   6. Put your pet to bed
+   7. Look at your pet and
+   8. Look at your options
+   9. Exit the game
