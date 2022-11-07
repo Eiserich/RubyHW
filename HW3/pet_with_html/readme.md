@@ -1,17 +1,18 @@
 # Tamagotchi
 
 ### How to install
-1. git clone https://github.com/Eiserich/RubyHW
-2. gem install bundler
-3. bundle install
-4. pet_with_html.rb
+1. `git clone https://github.com/Eiserich/RubyHW`
+2. `gem install bundler`
+3. `bundle install`
+4. `ruby pet_with_html.rb`
 ### Your actions are:
-   1. Clean your pet
-   2. Feed your pet
-   3. Play with your pet
-   4. Walk with your pet
-   5. Take your pet to the vet
-   6. Look at your pet and
-   7. Look at your options
-   8. Exit the game
-   9. Open in browser"
+   1.  Clean your pet
+   2.  Feed your pet
+   3.  Play with your pet
+   4.  Walk with your pet
+   5.  Take your pet to the vet
+   6.  Put your pet to bed
+   7.  Look at your pet and
+   8.  Look at your options
+   9.  Exit the game
+   10. Open in browser"
