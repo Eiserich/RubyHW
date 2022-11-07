@@ -177,6 +177,7 @@ class Pet
     @energy  -= rand(5)
   end
 
+  private
   def time_pass
     @hygiene -= rand(10)
     @health   = 0 if @hygiene.negative?
