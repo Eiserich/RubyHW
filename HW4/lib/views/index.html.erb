@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/stylesheets/styles.css" type="text/css">
+</head>
+<body class="status">
+<h3>Health   <%= get('health')  %></h3>
+<h3>Hunger <%= get('hunger')%></h3>
+<h3>Hygiene <%= get('hygiene') %></h3>
+<h3>Fun  <%= get('fun') %></h3>
+<h3>Energy  <%= get('energy') %></h3>
+<div class="row">
+    <form action="/chage" method="get">
+        <button type="submit" class="btn btn-primary" name="action" value="food">Feed</button>
+        <button type="submit" class="btn btn-secondary" name="action" value="walk">Walk</button>
+        <button type="submit" class="btn btn-success" name="action" value="berate">Play</button>
+        <button type="submit" class="btn btn-danger" name="action" value="takeToTheVet">TakeToVet</button>
+        <button type="submit" class="btn btn-warning" name="action" value="readingABook">Clean</button>
+        <button type="submit" class="btn btn-info" name="action" value="cleaningTheRoom">PutToBed</button>
+    </form>
+</div>
+</body>
+</html>

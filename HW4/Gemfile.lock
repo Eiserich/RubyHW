@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cgi (0.3.3)
+    erb (3.0.0)
+      cgi (>= 0.3.3)
+    rack (3.0.0)
+    rackup (0.2.3)
+      rack (>= 3.0.0.beta1)
+      webrick
+    webrick (1.7.0)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  erb
+  rack
+  rackup
+
+BUNDLED WITH
+   2.3.25
