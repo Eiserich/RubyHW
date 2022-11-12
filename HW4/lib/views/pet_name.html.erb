@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <meta charset="utf-8">
-    <title>Name for pet</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="/public/stylesheets/styles.css" type="text/css">
+  <title>Name for pet</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
+<% if pet.nil? %>
 <div class="row">
-    <form class="form-inline" action="/initialize" method="get">
+    <form class="form-inline" action="/create_pet" method="post">
         <label for="name">Enter name for your pet: </label>
         <div class="form-group mx-sm-3">
             <label for="name" class="sr-only">Name</label>
             <input type="text" name="name" class="form-control" id="" placeholder="Name">
         </div>
-
         <button type="submit" class="btn btn-primary btn-lg" value="Start">Start</button>
+      <% else %>
+<h1> You already started the game </h1>
+  <a href="/game">Play with <%= pet.name %>!</a>
+<% end %>
     </form>
 </div>

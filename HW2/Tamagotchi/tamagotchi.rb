@@ -1,8 +1,9 @@
 class Pet
-  attr_accessor :hunger, :health, :hygiene, :fun, :name, :energy
+  attr_accessor :hunger, :health, :hygiene, :fun, :name, :energy, :life
 
   def initialize
     @name    = name
+    @life    = 5
     @health  = health
     @hunger  = hunger
     @hygiene = hygiene
@@ -120,6 +121,7 @@ class Pet
   end
 
   def status(_name)
+    puts "Life:     #{@life}"
     puts "Health:   #{@health}"
     puts "Hunger:   #{@hunger}"
     puts "Hygiene:  #{@hygiene}"
@@ -128,7 +130,7 @@ class Pet
   end
 
   def alive
-    @health.positive?
+    @life.positive?
   end
 
   def feed
@@ -180,14 +182,15 @@ class Pet
   private
   def time_pass
     @hygiene -= rand(10)
-    @health   = 0 if @hygiene.negative?
+    @life    -= 1 if @hygiene.negative?
     @fun     -= rand(10)
-    @health   = 0 if @fun.negative?
+    @life    -= 1 if @fun.negative?
     @hunger  -= rand(10)
-    @health   = 0 if @hunger.negative?
+    @life    -= 1 if @hunger.negative?
     @energy  -= rand(10)
-    @health   = 0 if @energy.negative?
+    @life    -= 1 if @energy.negative?
     @health  -= rand(10)
+    @life    -= 1 if @health.negative?
   end
 end
 pet = Pet.new

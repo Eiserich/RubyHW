@@ -1,6 +1,9 @@
-require './lib/app'
-require 'rack'
+require "./lib/app"
+require "rack"
 
 use Rack::Reloader, 0
+use Rack::Auth::Basic do |username, password|
+  username == "Gamer" && password == "password"
+end
 
-run Rack::Cascade.new([Rack::File.new("public"), App])
+run App.new
