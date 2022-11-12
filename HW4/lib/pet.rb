@@ -9,6 +9,20 @@ class Pet
     @hygiene = 80
     @fun     = 80
     @energy  = 80
+  end
+
+    def status(_name)
+      puts "Life:     #{@life}"
+      puts "Health:   #{@health}"
+      puts "Hunger:   #{@hunger}"
+      puts "Hygiene:  #{@hygiene}"
+      puts "Fun:      #{@fun}"
+      puts "Energy:   #{@energy}"
+    end
+
+    def alive
+      @life.positive?
+    end
 
     def feed
       @hunger  += rand(15)
@@ -54,16 +68,6 @@ class Pet
       check
     end
 
-    def wait
-      @health  -= rand(5)
-      @hunger  -= rand(5)
-      @hygiene -= rand(5)
-      @fun     -= rand(5)
-      @energy  -= rand(5)
-      check
-    end
-  end
-
   def check
     @life  -= 1 if @health.negative?
     @life  -= 1 if @hunger.negative?
@@ -71,9 +75,4 @@ class Pet
     @life  -= 1 if @fun.negative?
     @life  -= 1 if @energy.negative?
   end
-
-  def alive
-    @life.positive?
-  end
-
 end
