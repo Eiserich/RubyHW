@@ -11,15 +11,6 @@ class Pet
     @energy  = 80
   end
 
-    def status(_name)
-      puts "Life:     #{@life}"
-      puts "Health:   #{@health}"
-      puts "Hunger:   #{@hunger}"
-      puts "Hygiene:  #{@hygiene}"
-      puts "Fun:      #{@fun}"
-      puts "Energy:   #{@energy}"
-    end
-
     def alive
       @life.positive?
     end

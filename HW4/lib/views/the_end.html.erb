@@ -5,13 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <style>
+      body {
+          background-color: antiquewhite;
+      }
+  </style>
 </head>
 <body>
 <div class="container">
-    <h1 class="mt-5">Game Over!</h1>
-    <p class="lead">Your pet has died... Do you want to get a new one?</p>
+    <h1 class="mt-5-fluid d-flex h-100 justify-content-center align-items-center p-0">Game Over!</h1>
+    <p class="lead-fluid d-flex h-100 justify-content-center align-items-center p-0">Your pet has died... Do you want to get a new one?</p>
     <form action="/" method="get">
-        <button type="submit" class="btn btn-primary" name="new_game" value="new_game">Start new game</button>
+        <button type="submit" class="btn btn-primary d-grid gap-2 col-6 mx-auto" name="new_game" value="new_game">Start new game</button>
     </form>
 </div>
 </body>

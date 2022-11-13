@@ -1,6 +1,6 @@
 require "erb"
 require_relative "pet"
-require 'byebug'
+
 class App
   attr_reader :request, :path
   attr_accessor :pet
