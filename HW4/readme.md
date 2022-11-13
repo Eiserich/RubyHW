@@ -8,4 +8,4 @@ You need to input in terminal
 4. `rackup`
 
 Then you need to open your browser
-5. `http://localhost:9292`
+5 . `http://localhost:9292`
