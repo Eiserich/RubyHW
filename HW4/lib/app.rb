@@ -81,7 +81,7 @@ class App
 
     when "/game_over"
       @pet = nil
-      response_redirect("/game_over")
+      Rack::Response.new(render("the_end.html.erb"))
     else response_redirect("/")
     end
   end

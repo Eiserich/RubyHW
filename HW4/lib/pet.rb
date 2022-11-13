@@ -28,7 +28,7 @@ class Pet
       @hunger  += rand(15)
       @health  += rand(5)
       @hygiene -= rand(10)
-      check
+      time_pass
     end
 
     def play
@@ -36,14 +36,14 @@ class Pet
       @health  -= rand(10)
       @hygiene -= rand(5)
       @energy  -= rand(15)
-      check
+      time_pass
     end
 
     def clean
       @hygiene += rand(20)
       @fun     += rand(10)
       @health  += rand(5)
-      check
+      time_pass
     end
 
     def walk
@@ -51,7 +51,7 @@ class Pet
       @fun     += rand(20)
       @hygiene -= rand(20)
       @energy  -= rand(15)
-      check
+      time_pass
     end
 
     def vet
@@ -59,14 +59,26 @@ class Pet
       @hunger  -= rand(5)
       @hygiene += rand(5)
       @fun     -= rand(20)
-      check
+      time_pass
     end
 
     def sleep
       @hunger -= rand(10)
       @energy += rand(20)
-      check
+      time_pass
     end
+
+  private
+
+  def time_pass
+    @hygiene -= rand(10)
+    @fun     -= rand(10)
+    @hunger  -= rand(10)
+    @energy  -= rand(10)
+    @health  -= rand(10)
+    check
+    heal
+  end
 
   def check
     @life  -= 1 if @health.negative?
@@ -74,5 +86,13 @@ class Pet
     @life  -= 1 if @hygiene.negative?
     @life  -= 1 if @fun.negative?
     @life  -= 1 if @energy.negative?
+  end
+
+  def heal
+    @life  += 1 if @health  > 100
+    @life  += 1 if @hunger  > 100
+    @life  += 1 if @hygiene > 100
+    @life  += 1 if @fun     > 100
+    @life  += 1 if @energy  > 100
   end
 end
