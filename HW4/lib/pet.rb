@@ -62,21 +62,12 @@ class Pet
   private
 
   def time_pass
-    @hygiene -= rand(10)
-    @fun     -= rand(10)
-    @hunger  -= rand(10)
-    @energy  -= rand(10)
-    @health  -= rand(10)
-    check
-    heal
-  end
-
-  def check
     @life  -= 1 if @health.negative?
     @life  -= 1 if @hunger.negative?
     @life  -= 1 if @hygiene.negative?
     @life  -= 1 if @fun.negative?
     @life  -= 1 if @energy.negative?
+    heal
   end
 
   def heal

@@ -14,76 +14,76 @@ class App
   def response
     case @request.path
 
-    when "/" then Rack::Response.new(render("pet_name.html.erb"))
+    when "/" then rack_response("pet_name.html.erb"))
 
     when "/create_pet" then name = request.params["name"]
     return response_redirect("/") if name.nil? || name.length.zero?
     @pet = Pet.new(name)
-    response_redirect("/game")
+      response_redirect("/game")
 
     when "/game"
       return response_redirect("/") if pet.nil?
-      Rack::Response.new(render("index.html.erb"))
+        rack_response("index.html.erb"))
 
     when "/feed"
       return response_redirect("/") if pet.nil?
       if pet.alive
-        pet.feed
-      Rack::Response.new(render("index.html.erb"))
+         pet.feed
+         rack_response("index.html.erb"))
       else
-        response_redirect("/game_over")
-        end
+         response_redirect("/game_over")
+      end
 
     when "/play"
       return response_redirect("/") if pet.nil?
       if pet.alive
-          pet.play
-      Rack::Response.new(render("index.html.erb"))
-          else
-    response_redirect("/game_over")
-    end
+         pet.play
+         rack_response("index.html.erb"))
+      else
+         response_redirect("/game_over")
+      end
 
     when "/clean"
       return response_redirect("/") if pet.nil?
       if pet.alive
-        pet.clean
-      Rack::Response.new(render("index.html.erb"))
-        else
-        response_redirect("/game_over")
-        end
+         pet.clean
+         rack_response("index.html.erb"))
+      else
+         response_redirect("/game_over")
+      end
 
     when "/walk"
       return response_redirect("/") if pet.nil?
       if pet.alive
-        pet.walk
-      Rack::Response.new(render("index.html.erb"))
-        else
-        response_redirect("/game_over")
-        end
+         pet.walk
+         rack_response("index.html.erb"))
+      else
+         response_redirect("/game_over")
+      end
 
     when "/vet"
       return response_redirect("/") if pet.nil?
       if pet.alive
-        pet.vet
-      Rack::Response.new(render("index.html.erb"))
-        else
-        response_redirect("/game_over")
-        end
+         pet.vet
+         rack_response("index.html.erb"))
+      else
+         response_redirect("/game_over")
+      end
 
     when "/sleep"
       return response_redirect("/") if pet.nil?
       if pet.alive
-        pet.sleep
-      Rack::Response.new(render("index.html.erb"))
-        else
-        response_redirect("/game_over")
-        end
+         pet.sleep
+         rack_response("index.html.erb"))
+      else
+         response_redirect("/game_over")
+      end
 
     when "/game_over"
       @pet = nil
-      Rack::Response.new(render("the_end.html.erb"))
+      rack_response("the_end.html.erb"))
     else response_redirect("/")
-    end
+  end
   end
 
     def render(template)
@@ -91,6 +91,9 @@ class App
     ERB.new(File.read(path)).result(binding)
     end
 
+  def rack_response(template)
+    Rack::Response.new(render(template))
+  end
   def response_redirect(path)
     Rack::Response.new do |response|
       response.redirect(path)
