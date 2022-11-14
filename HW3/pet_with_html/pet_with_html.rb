@@ -1,4 +1,5 @@
 require 'KraVs'
+
 class Pet
   attr_accessor :hunger, :health, :hygiene, :fun, :name, :energy, :life
 
@@ -21,22 +22,14 @@ class Pet
     when 'Yes'
       puts 'You walk up to the bushes and...'
       puts 'You found a dog.'
-      @health  = rand(50..89)
-      @hunger  = rand(50..89)
-      @hygiene = rand(50..89)
-      @fun     = rand(50..89)
-      @energy  = rand(50..89)
+      @health  = @hunger  = @hygiene = @fun = @energy  = rand(50..89)
       name_pet
       menu
       status(@name)
     when 'No'
       puts 'You start to walk away but something starts to follow you.'
       puts 'You turn around and see a dog looking at you sadly because of your choose.'
-      @health  = rand(30..49)
-      @hunger  = rand(30..49)
-      @hygiene = rand(30..49)
-      @fun     = rand(30..49)
-      @energy  = rand(30..49)
+      @health  = @hunger  = @hygiene = @fun     = @energy  = rand(30..49)
       name_pet
       menu
       status(@name)
@@ -152,9 +145,8 @@ class Pet
   end
 
   def clean
-    @hygiene += rand(20)
-    @fun     += rand(10)
-    @health  += rand(5)
+    @hygiene        += rand(20)
+    @fun = @health  += rand(5)
   end
 
   def walk
@@ -177,36 +169,28 @@ class Pet
   end
 
   def look
-    @health  -= rand(5)
-    @hunger  -= rand(5)
-    @hygiene -= rand(5)
-    @fun     -= rand(5)
-    @energy  -= rand(5)
+    @health = @hunger = @hygiene = @fun = @energy -= rand(5)
   end
 
   private
 
   def time_pass
-    @hygiene -= rand(10)
+    @hygiene = @fun = @hunger = @energy = @health -= rand(10)
     @life    -= 1 if @hygiene.negative?
-    @fun     -= rand(10)
     @life    -= 1 if @fun.negative?
-    @hunger  -= rand(10)
     @life    -= 1 if @hunger.negative?
-    @energy  -= rand(10)
     @life    -= 1 if @energy.negative?
-    @health  -= rand(10)
     @life    -= 1 if @health.negative?
 
     KraVs.save(info_html, file_name: 'index.html', bypass_html: true)
-    if @health >= 80
-      @health_unicode_status = '&#128522;'
-    elsif @health <= 50
-      @health_unicode_status = '&#128528;'
-    elsif @health <= 30
-      @health_unicode_status = '&#9785;'
-    elsif @health.zero?
-      @health_unicode_status = '&#9760;'
+    if @life >= 4
+      @life_unicode_status = '&#128522;'
+    elsif @life <= 3
+      @life_unicode_status = '&#128528;'
+    elsif @life <= 1
+      @life_unicode_status = '&#9785;'
+    elsif @life.zero?
+      @life_unicode_status = '&#9760;'
     end
   end
 
@@ -217,7 +201,7 @@ class Pet
       <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Hunger:                  #{@hunger}</p>
       <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Hygiene:                 #{@hygiene}</p>
       <p style="color:#000000; text-align: center; font-size: 32px; font-family: Menlo, serif">Fun:                     #{@fun}</p>
-      <p style="text-align: center; font-size: 64px">#{@health_unicode_status}</p>
+      <p style="text-align: center; font-size: 64px">#{@life_unicode_status}</p>
     HTML
   end
 end
