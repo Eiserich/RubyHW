@@ -38,6 +38,7 @@ class App
       if pet.alive
         pet.play
         rack_response("index.html.erb")
+      else
         response_redirect("/game_over")
       end
 
@@ -74,7 +75,7 @@ class App
         pet.sleep
         rack_response("index.html.erb")
       else
-         response_redirect("/game_over")
+        response_redirect("/game_over")
       end
 
     when "/game_over"

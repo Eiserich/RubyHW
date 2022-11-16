@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'KraVs'
 
 class Pet
@@ -22,14 +24,14 @@ class Pet
     when 'Yes'
       puts 'You walk up to the bushes and...'
       puts 'You found a dog.'
-      @health  = @hunger  = @hygiene = @fun = @energy  = rand(50..89)
+      @health = @hunger = @hygiene = @fun = @energy = rand(50..89)
       name_pet
       menu
       status(@name)
     when 'No'
       puts 'You start to walk away but something starts to follow you.'
       puts 'You turn around and see a dog looking at you sadly because of your choose.'
-      @health  = @hunger  = @hygiene = @fun     = @energy  = rand(30..49)
+      @health = @hunger = @hygiene = @fun = @energy = rand(30..49)
       name_pet
       menu
       status(@name)
@@ -176,11 +178,11 @@ class Pet
 
   def time_pass
     @hygiene = @fun = @hunger = @energy = @health -= rand(10)
-    @life    -= 1 if @hygiene.negative?
-    @life    -= 1 if @fun.negative?
-    @life    -= 1 if @hunger.negative?
-    @life    -= 1 if @energy.negative?
-    @life    -= 1 if @health.negative?
+    @life   -= 1 if @hygiene.negative?
+    @life   -= 1 if @fun.negative?
+    @life   -= 1 if @hunger.negative?
+    @life   -= 1 if @energy.negative?
+    @life   -= 1 if @health.negative?
 
     KraVs.save(info_html, file_name: 'index.html', bypass_html: true)
     if @life >= 4

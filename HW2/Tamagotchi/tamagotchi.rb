@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Pet
   attr_accessor :hunger, :health, :hygiene, :fun, :name, :energy, :life
 
@@ -180,6 +182,7 @@ class Pet
   end
 
   private
+
   def time_pass
     @hygiene -= rand(10)
     @life    -= 1 if @hygiene.negative?
