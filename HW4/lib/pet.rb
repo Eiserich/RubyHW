@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Pet
   attr_reader :hunger, :health, :hygiene, :fun, :name, :energy, :life
 
