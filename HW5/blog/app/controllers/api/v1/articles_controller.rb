@@ -24,15 +24,15 @@ class Api::V1::ArticlesController < ApplicationController
     params.require(:article).permit(:title, :body)
   end
 
-  #  GET request
+  # GET request
   def show
-    article = Article.find(params[:id])
+     article = Article.find(params[:id])
 
-    if article
-      render json: { data: article }, state: :ok
-    else
-      render json: { message: "Article could not be found" }, status: :bad_request
-    end
+   if article
+     render json: { data: article }, state: :ok
+   else
+     render json: { message: "Article could not be found" }, status: :bad_request
+   end
   end
 
   #  DELETE request
