@@ -1,59 +1,68 @@
 class Api::V1::ArticlesController < ApplicationController
+  before_action :set_article, only: %i[show update destroy]
+
+  # GET articles
   def index
-    articles = Article.all
-    if articles
-      render json: { status: "SUCCESS", message: "Fetched all articles successfully", data: articles }, status: :ok
+    @articles = Article.all
+
+    render json: @articles
+  end
+
+  # GET articles/1
+  def show
+    @comments = Article.find(params[:id]).comments
+
+    render json: { post: @article, comments: @comments }
+  end
+
+  # GET articles/1/published
+  def published
+    @comments = Article.find(params[:id]).comments.published_comments
+
+    render json: @comments
+  end
+
+  # GET articles/1/unpublished
+  def unpublished
+    @comments = Article.find(params[:id]).comments.unpublished_comments
+
+    render json: @comments
+  end
+
+  # POST articles
+  def create
+    @article = Article.new(article_params)
+
+    if @article.save
+      render json: @article, status: :created
     else
-      render json: articles.errors, status: :bad_request
+      render json: @article.errors, status: :unprocessable_entity
     end
   end
 
-  def create
-    article = Article.new(article_params)
-
-    if article.save
-      render json: { status: "SUCCESS", message: "Article was created successfully!", data: article }, status: :created
+  # PATCH/PUT articles/1
+  def update
+    if @article.update(article_params)
+      render json: @article
     else
-      render json: article.errors, status: :unprocessable_entity
+      render json: @article.errors, status: :unprocessable_entity
     end
+  end
+
+  # DELETE articles/1
+  def destroy
+    @article.destroy
   end
 
   private
 
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
   def article_params
     params.require(:article).permit(:title, :body)
-  end
-
-  # GET request
-  def show
-     article = Article.find(params[:id])
-
-   if article
-     render json: { data: article }, state: :ok
-   else
-     render json: { message: "Article could not be found" }, status: :bad_request
-   end
-  end
-
-  #  DELETE request
-  def destroy
-    article = Article.find(params[:id])
-
-    if article.destroy!
-      render json: { message: "Article was deleted successfully" }, status: :ok
-    else
-      render json: { message: "Article does not exist" }, status: :bad_request
-    end
-  end
-
-  # PATCH request
-  def update
-    article = Article.find(params[:id])
-
-    if article.update!(article_params)
-      render json: { message: "Article was updated successfully", data: article }, status: :ok
-    else
-      render json: { message: "Article cannot be updated" }, status: :unprocessable_entity
-    end
   end
 end
