@@ -18,11 +18,12 @@ class App
 
     when '/' then rack_response('pet_name.html.erb')
 
-    when '/create_pet' then name = request.params['name']
-                            return response_redirect('/') if name.nil? || name.length.zero?
+    when '/create_pet'
+      name = request.params['name']
+      return response_redirect('/') if name.nil? || name.length.zero?
 
-                            @pet = Pet.new(name)
-                            response_redirect('/game')
+      @pet = Pet.new(name)
+      response_redirect('/game')
 
     when '/game'
       return response_redirect('/') if pet.nil?
