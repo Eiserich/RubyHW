@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="hw6 ready">
-      <change beforePath="$PROJECT_DIR$/.idea/RubyHW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RubyHW.iml" afterDir="false" />
+    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="hw4 update">
+      <change afterPath="$PROJECT_DIR$/HW4/lib/views/_head_html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW4/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW4/gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW4/lib/app.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/lib/app.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW4/lib/views/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/lib/views/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW4/lib/views/pet_name.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/lib/views/pet_name.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW4/lib/views/the_end.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/HW4/lib/views/the_end.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/.ruby-version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +69,9 @@
       <workItem from="1669914711901" duration="172000" />
       <workItem from="1669914920685" duration="1642000" />
       <workItem from="1669917788297" duration="837000" />
-      <workItem from="1669921537700" duration="843000" />
+      <workItem from="1669921537700" duration="1068000" />
+      <workItem from="1669924333058" duration="83000" />
+      <workItem from="1670005486170" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -145,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669917794133</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="hw4 update">
+      <created>1669922406077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669922406077</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +222,7 @@
       <path value="$PROJECT_DIR$/HW6/blog" />
     </ignored-roots>
     <MESSAGE value="hw6 ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw6 ready" />
+    <MESSAGE value="hw4 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw4 update" />
   </component>
 </project>
