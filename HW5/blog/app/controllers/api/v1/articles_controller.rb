@@ -4,39 +4,27 @@ class Api::V1::ArticlesController < ApplicationController
   # GET articles
   def index
     @articles = Article.all
-
-    render json: @articles
+    if @articles
+      render json: { data: @articles }
+    else
+      render json: @articles.errors
+    end
   end
 
   # GET articles/1
   def show
     @comments = Article.find(params[:id]).comments
 
-    render json: { post: @article, comments: @comments }
+    render json: { data: @article, comments: @comments }
   end
 
-  # GET articles/1/published
-  def published
-    @comments = Article.find(params[:id]).comments.published_comments
-
-    render json: @comments
-  end
-
-  # GET articles/1/unpublished
-  def unpublished
-    @comments = Article.find(params[:id]).comments.unpublished_comments
-
-    render json: @comments
-  end
-
-  # POST articles
   def create
     @article = Article.new(article_params)
 
     if @article.save
-      render json: @article, status: :created
+      render json: { data: @article }
     else
-      render json: @article.errors, status: :unprocessable_entity
+      render json: @article.errors
     end
   end
 
@@ -45,13 +33,17 @@ class Api::V1::ArticlesController < ApplicationController
     if @article.update(article_params)
       render json: @article
     else
-      render json: @article.errors, status: :unprocessable_entity
+      render json: @article.errors
     end
   end
 
   # DELETE articles/1
   def destroy
-    @article.destroy
+    if @article.destroy
+      render json: { status: "Delete" }
+    else
+      render json: @article.errors
+    end
   end
 
   private

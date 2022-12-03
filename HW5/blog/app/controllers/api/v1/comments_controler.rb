@@ -32,9 +32,9 @@ class Api::V1::CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      render json: @comment, status: :created
+      render json: @comment
     else
-      render json: @comment.errors, status: :unprocessable_entity
+      render json: @comment.errors
     end
   end
 
@@ -43,7 +43,7 @@ class Api::V1::CommentsController < ApplicationController
     if @comment.update(comment_params)
       render json: @comment
     else
-      render json: @comment.errors, status: :unprocessable_entity
+      render json: @comment.errors
     end
   end
 
