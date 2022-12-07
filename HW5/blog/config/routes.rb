@@ -7,9 +7,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :authors do
       end
+      esources :tags do
       resources :articles do
-        get :published, on: :member
-        get :unpublished, on: :member
       end
       resources :comments do
         get :change_status, to: 'comments#switch_status', on: :member

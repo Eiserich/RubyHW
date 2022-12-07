@@ -1,7 +1,8 @@
 class Comment < ApplicationRecord
   belongs_to :author, dependent: :destroy
   belongs_to :article, dependent: :destroy
-  validates  :body, :author_id, :article_id, presence: true
+  has_many :likes, as: :likeable
+  validates  :author, :article, presence: true
   validates  :body, presence: true, length: { minimum: 1 }
 
   enum :status, [ :unpublished, :published ], default: :unpublished
