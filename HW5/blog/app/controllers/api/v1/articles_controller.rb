@@ -1,59 +1,53 @@
 class Api::V1::ArticlesController < ApplicationController
   before_action :set_article, only: %i[show update destroy]
 
-  # GET articles
   def index
     @articles = Article.all
     if @articles
-      render json: { data: @articles }
+      render json: { data: @articles }, status: :ok
     else
-      render json: @articles.errors
+      render json: @articles.errors, status: :unprocessable_entity
     end
   end
 
-  # GET articles/1
   def show
     @comments = Article.find(params[:id]).comments
 
-    render json: { data: @article, comments: @comments }
+    render json: { data: @articles, comments: @comments }, status: :ok
   end
 
   def create
     @article = Article.new(article_params)
 
     if @article.save
-      render json: { data: @article }
+      render json: { data: @article }, status: :ok
     else
-      render json: @article.errors
+      render json: @article.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT articles/1
   def update
     if @article.update(article_params)
-      render json: @article
+      render json: @article, status: :ok
     else
-      render json: @article.errors
+      render json: @article.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE articles/1
   def destroy
     if @article.destroy
-      render json: { status: "Delete" }
+      render json: { status: "Delete" }, status: :no_content
     else
-      render json: @article.errors
+      render json: @article.errors, status: :unprocessable_entity
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_article
     @article = Article.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def article_params
     params.require(:article).permit(:title, :body)
   end

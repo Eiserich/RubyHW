@@ -4,31 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="hw7 some update">
+    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="hw7 2/3 done">
       <change afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/authors_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/likes_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/blog/app/models/like.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/blog/db/migrate/20221207120007_create_likes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/blog/test/fixtures/likes.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW5/blog/test/models/like_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_development.HsjP9Q/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_development.HsjP9Q/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_development.HsjP9Q/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_development.HsjP9Q/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_test.D0M5Og/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_test.D0M5Og/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_test.D0M5Og/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/blog_test.D0M5Og/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4de9b50a-c2e9-43c4-ad7b-3c946ce555c8/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RubyHW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RubyHW.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/blog/app/models/article.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/models/article.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/blog/app/models/author.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/models/author.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/comments_controler.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/comments_controler.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/likes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/likes_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/models/comment.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/app/models/tag.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/models/tag.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/blog/db/migrate/20221203085854_create_article_tags.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/db/migrate/20221203085854_create_article_tags.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/blog/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +96,18 @@
       <workItem from="1670414145143" duration="407000" />
       <workItem from="1670414897894" duration="588000" />
       <workItem from="1670416248666" duration="1324000" />
+      <workItem from="1670432413346" duration="48000" />
+      <workItem from="1670488014530" duration="936000" />
+      <workItem from="1670500088262" duration="682000" />
+      <workItem from="1670661292437" duration="670000" />
+      <workItem from="1670662086148" duration="1503000" />
+      <workItem from="1670663623089" duration="93000" />
+      <workItem from="1670663731880" duration="52000" />
+      <workItem from="1670663827779" duration="830000" />
+      <workItem from="1670674294093" duration="97000" />
+      <workItem from="1670674392935" duration="28000" />
+      <workItem from="1670674535474" duration="2421000" />
+      <workItem from="1670680749109" duration="3975000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -208,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670064992883</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="hw7 2/3 done">
+      <created>1670432448913</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670432448913</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,6 +282,7 @@
     <MESSAGE value="hw6 ready" />
     <MESSAGE value="hw4 update" />
     <MESSAGE value="hw7 some update" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw7 some update" />
+    <MESSAGE value="hw7 2/3 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="hw7 2/3 done" />
   </component>
 </project>
