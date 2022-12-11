@@ -11,16 +11,17 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def show
-    @comments = Article.find(params[:id]).comments
+    @comments = Article.find(params[:id]).comments.ten_comments
+    @tags = @article.tags
 
-    render json: { data: @articles, comments: @comments }, status: :ok
+    render json: { article: @article, comments: @comments, tags: @tags }, status: :ok
   end
 
   def create
     @article = Article.new(article_params)
 
     if @article.save
-      render json: { data: @article }, status: :ok
+      render json: { data: @article }, status: :created
     else
       render json: @article.errors, status: :unprocessable_entity
     end
@@ -36,7 +37,7 @@ class Api::V1::ArticlesController < ApplicationController
 
   def destroy
     if @article.destroy
-      render json: { status: "Delete" }, status: :no_content
+      render json: { status: 'Delete' }, status: :no_content
     else
       render json: @article.errors, status: :unprocessable_entity
     end

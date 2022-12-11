@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="hw7 2/3 done">
-      <change afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/authors_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RubyHW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RubyHW.iml" afterDir="false" />
+    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="some update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/authors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/authors_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/comments_controler.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/comments_controler.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/likes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/likes_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/blog/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/models/comment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5/blog/app/models/tag.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/app/models/tag.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5/blog/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5/blog/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +105,8 @@
       <workItem from="1670674392935" duration="28000" />
       <workItem from="1670674535474" duration="2421000" />
       <workItem from="1670680749109" duration="3975000" />
+      <workItem from="1670706227378" duration="33000" />
+      <workItem from="1670747485405" duration="2758000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -214,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670432448913</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="some update">
+      <created>1670706247183</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670706247183</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +289,7 @@
     <MESSAGE value="hw4 update" />
     <MESSAGE value="hw7 some update" />
     <MESSAGE value="hw7 2/3 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw7 2/3 done" />
+    <MESSAGE value="some update" />
+    <option name="LAST_COMMIT_MESSAGE" value="some update" />
   </component>
 </project>

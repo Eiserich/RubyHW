@@ -1,26 +1,6 @@
 class Api::V1::AuthorsController < ApplicationController
   before_action :set_author, only: %i[show create update destroy]
 
-  def create
-    @author = Author.new(author_params)
-    if @author.save
-      render json: {  data: @author }, status: :ok
-    else
-      render json: @author.errors, status: :unprocessable_entity
-    end
-  end
-
-  def author_index
-    @author = Author.find_by_id(params[:author_id])
-    @comment_author = @author.comments.all
-
-    if @comment_author
-      render json: @comment_author, status: :ok
-    else
-      render json: @comment_author.errors, status: :unprocessable_entity
-    end
-  end
-
   def index
     @authors = Author.all
     if @authors
@@ -34,7 +14,16 @@ class Api::V1::AuthorsController < ApplicationController
     if @author
       render json: @author, status: :ok
     else
-      render json: { message: "Not found" }
+      render json: { message: 'Not found' }
+    end
+  end
+
+  def create
+    @author = Author.new(author_params)
+    if @author.save
+      render json: { data: @author }, status: :created
+    else
+      render json: @author.errors, status: :unprocessable_entity
     end
   end
 
@@ -48,9 +37,19 @@ class Api::V1::AuthorsController < ApplicationController
 
   def destroy
     if @author.destroy
-      render json: { status: "Delete" }, status: :no_content
+      render json: { status: 'Delete' }, status: :no_content
     else
       render json: @author.errors, status: :unprocessable_entity
     end
+  end
+
+  private
+
+  def set_author
+    @author = Author.find(params[:id])
+  end
+
+  def author_params
+    params.require(:author).permit(:name)
   end
 end

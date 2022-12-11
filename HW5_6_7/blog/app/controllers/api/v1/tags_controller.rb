@@ -15,7 +15,7 @@ class Api::V1::TagsController < ApplicationController
     @tag = Tag.new(tag_params)
 
     if @tag.save
-      render json: @tag, status: :ok
+      render json: @tag, status: :created
     else
       render json: @tag.errors, status: :unprocessable_entity
     end
@@ -31,7 +31,7 @@ class Api::V1::TagsController < ApplicationController
 
   def destroy
     if @tag.destroy
-      render json: { status: "Delete" }, status: :no_content
+      render json: { status: 'Delete' }, status: :no_content
     else
       render json: @tag.errors, status: :unprocessable_entity
     end

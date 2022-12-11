@@ -1,5 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
-  before_action :set_comment, only: %i[show update destroy status]
+  before_action :set_comment, only: %i[show update destroy]
 
   def index
     @comments = Comment.all
@@ -11,26 +11,29 @@ class Api::V1::CommentsController < ApplicationController
     render json: @comment, status: :ok
   end
 
-  def published
-    @comments = Comment.published_comments
-
-    render json: @comments, status: :ok
-  end
-
-  def unpublished
-    @comments = Comment.unpublished.comments
-
-    render json: @comments, status: :ok
-  end
-
   def create
     @comment = Comment.new(comment_params)
 
     if @comment.save
-      render json: @comment, status: :ok
+      render json: @comment, status: :created
     else
       render json: @comment.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    if @comment.destroy
+      render json: { status: 'Delete' }, status: :no_content
+    else
+      render json: @comment.errors, status: :unprocessable_entity
+    end
+  end
+
+  def change_status
+    new_status = Comment.status == 'unpublished' ? 'published' : 'unpublished'
+    @comments = Comment.update(status: new_status)
+
+    render json: @comment, status: :ok
   end
 
   def update
@@ -41,19 +44,16 @@ class Api::V1::CommentsController < ApplicationController
     end
   end
 
-  def destroy
-    if @comment.destroy
-      render json: { status: "Delete" }, status: :no_content
-    else
-      render json: @comment.errors, status: :unprocessable_entity
-    end
+  def published
+    @comments = Comment.published_comments
+
+    render json: @comments, status: :ok
   end
 
-  def status
-    new_status = Comment.status == 'unpublished' ? 'published' : 'unpublished'
-    @comments = Comment.update(status: new_status)
+  def unpublished
+    @comments = Comment.unpublished_comments
 
-    render json: @comment, status: :ok
+    render json: @comments, status: :ok
   end
 
   def last_ten_com
