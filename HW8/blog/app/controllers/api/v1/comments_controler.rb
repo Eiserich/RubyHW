@@ -1,13 +1,17 @@
 class Api::V1::CommentsController < ApplicationController
   before_action :set_comment, only: %i[show update destroy]
+  before_action :set_article
 
   def index
-    @comments = Comment.all
+    @comments = @article.comments
 
+    @pagy, @comments = pagy(@comments, items: 15)
     render json: @comments, status: :ok
   end
 
   def show
+    @comment = @article.comments.find(params[:id])
+
     render json: @comment, status: :ok
   end
 
@@ -57,12 +61,16 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def last_comments
-    @comments = Article.find(params[:article_id]).comments.:last_ten_comments
+    @comments = Article.find(params[:article_id]).comments.last_ten_comments
 
     render json: @comments, status: :ok
   end
 
   private
+
+  def set_article
+    @article = Article.find(params[:article_id])
+  end
 
   def set_comment
     @comment = Comment.find(params[:id])
