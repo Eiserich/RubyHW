@@ -4,100 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="some update">
-      <change afterPath="$PROJECT_DIR$/HW8/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/.rubocop.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/.ruby-version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/.ruby-version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/Gemfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/Gemfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/Rakefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/channels/application_cable/channel.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/channels/application_cable/connection.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/authors_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/comments_controler.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/likes_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/application_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/concerns/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/jobs/application_job.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/mailers/application_mailer.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/application_record.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/article.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/article_tag.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/author.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/comment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/concerns/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/like.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/models/tag.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/views/layouts/mailer.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/app/views/layouts/mailer.text.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/bin/bundle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/bin/rails" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/bin/rake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/bin/setup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config.ru" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/application.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/boot.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/cable.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/credentials.yml.enc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/database_example.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/environment.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/environments/development.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/environments/production.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/environments/test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/initializers/cors.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/initializers/filter_parameter_logging.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/initializers/inflections.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/locales/en.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/puma.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/routes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/config/storage.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/migrate/20221126120225_create_articles.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/migrate/20221126121301_create_authors.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/migrate/20221126121752_create_comments.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/migrate/20221203084239_create_tags.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/migrate/20221203085854_create_article_tags.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/migrate/20221207120007_create_likes.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/schema.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/lib/tasks/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/log/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/storage/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/channels/application_cable/connection_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/controllers/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/article_tags.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/articles.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/authors.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/comments.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/files/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/likes.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/fixtures/tags.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/integration/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/mailers/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/article_tag_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/article_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/author_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/comment_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/like_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/models/tag_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/test/test_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/tmp/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/tmp/pids/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/tmp/storage/.keep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW8/blog/vendor/.keep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RubyHW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RubyHW.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/comments_controler.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/comments_controler.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/models/comment.rb" afterDir="false" />
+    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="HW8 done">
+      <change beforePath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +100,7 @@
       <workItem from="1670680749109" duration="3975000" />
       <workItem from="1670706227378" duration="33000" />
       <workItem from="1670747485405" duration="2758000" />
-      <workItem from="1671617016499" duration="2676000" />
+      <workItem from="1671617016499" duration="2977000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -306,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670706247183</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="HW8 done">
+      <created>1671620096740</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1671620096740</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +291,7 @@
     <MESSAGE value="hw7 some update" />
     <MESSAGE value="hw7 2/3 done" />
     <MESSAGE value="some update" />
-    <option name="LAST_COMMIT_MESSAGE" value="some update" />
+    <MESSAGE value="HW8 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW8 done" />
   </component>
 </project>

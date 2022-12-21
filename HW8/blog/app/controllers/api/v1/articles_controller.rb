@@ -18,7 +18,7 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def show
-    render json: @article, each_serializer: ArticleSerializer
+    render json: @article, each_serializer: Api::V1::ArticleSerializer
   end
 
   def create
