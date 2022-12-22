@@ -2,7 +2,7 @@ require 'swagger_helper'
 
 RSpec.describe 'api/articles', type: :request do
   path '/api/v1/articles' do
-    get('list articles') do
+    get('list of articles') do
       tags 'Articles'
       consumes 'application/json'
       parameter name: :search, in: :query, schema: { type: :string },

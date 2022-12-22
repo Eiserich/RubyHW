@@ -6,7 +6,7 @@ class Api::V1::AuthorsController < ApplicationController
 
     @pagy, @authors = pagy(@authors, items: 15)
     render json: @authors, status: :ok
-end
+  end
 
   def show
     render json: @author, status: :ok

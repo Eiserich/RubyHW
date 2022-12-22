@@ -57,7 +57,7 @@ class Api::V1::CommentsController < ApplicationController
   end
 
   def last_comments
-    @comments = Article.find(params[:article_id]).comments.:last_ten_comments
+    @comments = Article.find(params[:article_id]).comments.last_ten_comments
 
     render json: @comments, status: :ok
   end

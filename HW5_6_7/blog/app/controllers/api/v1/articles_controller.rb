@@ -11,7 +11,7 @@ class Api::V1::ArticlesController < ApplicationController
   end
 
   def show
-    @comments = Article.find(params[:id]).comments.ten_comments
+    @comments = Article.find(params[:id]).comments.last_ten_comments
     @tags = @article.tags
 
     render json: { article: @article, comments: @comments, tags: @tags }, status: :ok

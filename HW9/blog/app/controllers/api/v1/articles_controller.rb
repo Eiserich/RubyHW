@@ -46,7 +46,7 @@ class Api::V1::ArticlesController < ApplicationController
       render json: @article.errors, status: :unprocessable_entity
     end
   end
-  
+
   private
 
   def set_article

@@ -1,6 +1,6 @@
 class Api::V1::LikesController < ApplicationController
   before_action :set_like, only: %i[show destroy]
-  
+
   def index
     @likes = Like.all
 
