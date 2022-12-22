@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="HW10 add admin">
-      <change afterPath="$PROJECT_DIR$/HW10/shop/app/admin/my_models.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/app/models/user.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222121543_devise_create_users.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/test/fixtures/users.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/test/models/user_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW10/shop/app/models/admin_user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/shop/app/models/admin_user.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW10/shop/config/initializers/devise.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/shop/config/initializers/devise.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW10/shop/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/shop/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW10/shop" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/shop" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW9/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/db/seeds.rb" afterDir="false" />
@@ -115,7 +107,7 @@
       <workItem from="1671617016499" duration="6267000" />
       <workItem from="1671625220449" duration="3805000" />
       <workItem from="1671641498229" duration="843000" />
-      <workItem from="1671694885956" duration="12435000" />
+      <workItem from="1671694885956" duration="12742000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -278,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671709548241</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="HW10 add admin">
+      <created>1671712020577</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1671712020577</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
