@@ -4,24 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="some style update">
-      <change afterPath="$PROJECT_DIR$/HW10/shop/app/controllers/products_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/app/models/category.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/app/models/product.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222102205_create_products.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222102228_create_categories.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/db/schema.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/test/fixtures/categories.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/test/fixtures/products.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/test/models/category_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/HW10/shop/test/models/product_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RubyHW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RubyHW.iml" afterDir="false" />
+    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="HW10 started">
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/admin/admin_users.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/admin/dashboard.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/assets/javascripts/active_admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/assets/stylesheets/active_admin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/controllers/categories_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/models/admin_user.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/config/initializers/active_admin.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/config/initializers/devise.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/config/locales/devise.en.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222113946_devise_create_admin_users.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222113950_create_active_admin_comments.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/test/fixtures/admin_users.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/test/models/admin_user_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW10/shop/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/shop/app/controllers/products_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW10/shop/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW10/shop/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW9/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/db/seeds.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW9/blog/spec/requests/api/comments_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/spec/requests/api/comments_spec.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HW9/blog/swagger/v1/swagger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/swagger/v1/swagger.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +123,7 @@
       <workItem from="1671617016499" duration="6267000" />
       <workItem from="1671625220449" duration="3805000" />
       <workItem from="1671641498229" duration="843000" />
-      <workItem from="1671694885956" duration="8204000" />
+      <workItem from="1671694885956" duration="10571000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -261,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671703649543</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="HW10 started">
+      <created>1671706812934</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1671706812934</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +345,7 @@
     <MESSAGE value="HW8 done" />
     <MESSAGE value="HW9  article description done" />
     <MESSAGE value="some style update" />
-    <option name="LAST_COMMIT_MESSAGE" value="some style update" />
+    <MESSAGE value="HW10 started" />
+    <option name="LAST_COMMIT_MESSAGE" value="HW10 started" />
   </component>
 </project>
