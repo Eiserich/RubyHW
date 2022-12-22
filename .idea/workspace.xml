@@ -4,39 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="HW9  article description done">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="2f3805a2-e2c6-49c2-860f-4fa8a2a153b5" name="Changes" comment="some style update">
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/controllers/products_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/models/category.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/app/models/product.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222102205_create_products.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/db/migrate/20221222102228_create_categories.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/db/schema.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/test/fixtures/categories.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/test/fixtures/products.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/test/models/category_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HW10/shop/test/models/product_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/RubyHW.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RubyHW.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/comments_controler.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/comments_controler.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/models/comment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/app/models/like.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/app/models/like.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW5_6_7/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW5_6_7/blog/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/.ruby-version" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/.ruby-version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/authors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/authors_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/likes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/likes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/models/comment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/app/models/like.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/app/models/like.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/config.ru" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/config.ru" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW8/blog/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW8/blog/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/Rakefile" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/Rakefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/articles_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/articles_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/authors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/authors_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/likes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/likes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/tags_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/app/controllers/api/v1/tags_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/app/models/comment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/app/models/comment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/app/models/like.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/app/models/like.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW9/blog/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/db/seeds.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HW9/blog/spec/requests/api/articles_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/spec/requests/api/articles_spec.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HW9/blog/spec/requests/api/comments_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/HW9/blog/spec/requests/api/comments_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +37,7 @@
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/HW10/shop" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -135,7 +119,7 @@
       <workItem from="1671617016499" duration="6267000" />
       <workItem from="1671625220449" duration="3805000" />
       <workItem from="1671641498229" duration="843000" />
-      <workItem from="1671694885956" duration="5723000" />
+      <workItem from="1671694885956" duration="8204000" />
     </task>
     <task id="LOCAL-00001" summary="hw6 ready">
       <created>1669721952112</created>
@@ -270,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671628136134</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="some style update">
+      <created>1671703649543</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1671703649543</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,6 +333,7 @@
     <MESSAGE value="some update" />
     <MESSAGE value="HW8 done" />
     <MESSAGE value="HW9  article description done" />
-    <option name="LAST_COMMIT_MESSAGE" value="HW9  article description done" />
+    <MESSAGE value="some style update" />
+    <option name="LAST_COMMIT_MESSAGE" value="some style update" />
   </component>
 </project>

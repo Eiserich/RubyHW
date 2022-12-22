@@ -4,7 +4,7 @@ class Api::V1::ArticlesController < ApplicationController
   def index
     @articles = Article.all
     if @articles
-      render json: { data: @articles }, status: :ok
+      render json: @articles, status: :ok
     else
       render json: @articles.errors, status: :unprocessable_entity
     end
