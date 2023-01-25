@@ -1,0 +1,47 @@
+<% if current_user %>
+  <h1>My cart</h1>
+  <% if current_cart.line_item.any? %>
+        <table class="table">
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <% current_cart.line_item.each do |line_item| %>
+            <tr>
+              <td><%= image_tag image_url(line_item.product.image), width: 80, height: 80 %></td>
+              <td><%= line_item.product.name %></td>
+              <td>
+                <div class="container">
+                  <div class="row row-cols-2 row-cols-lg-3">
+                    <div class="col">
+                      <%= line_item.quantity %>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                      <%= button_to "-", line_item_reduce_path(:id => line_item), method: :post, class: "btn btn-dark" %>
+                    </div>
+                    <div class="col-4 col-lg-2">
+                      <%= button_to "+", line_item_add_path(:id => line_item), method: :post, class: "btn btn-dark" %>
+                    </div>
+                    <div class="col">
+                      <%= button_to "delete", line_item_path(:id => line_item), method: :delete, class: "btn btn-dark" %>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <td><%= number_to_currency line_item.price * line_item.quantity%></td>
+            </tr>
+          <% end %>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th>Total price: <%= number_to_currency current_cart.total_price %></th>
+        </table>
+      <div>
+        <%= button_to 'Checkout', orders_path, class: "btn btn-dark"%>
+      </div>
+  <% else %>
+    <h1>Your cart is empty</h1>
+  <% end %>
+<% end %>
