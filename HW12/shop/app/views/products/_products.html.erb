@@ -1,0 +1,20 @@
+<% @products.each do |product| %>
+  <%= link_to product, class: 'row row-cols-1 row-cols-md-3 g-4' do %>
+    <div class="col">
+      <div class="card h-70">
+    <img src=<%= product.image %> class='card-img-top' alt=<%= product.name %>>
+    <div class='card-body px'>
+      <h5 class='card-title text-center'><%= product.name %></h5>
+      <p class='card-price mt-auto text-end'><%= number_to_currency(product.price) %></p>
+      <% if current_user %>
+        <%if !current_cart.line_items.where(product_id: product.id).present?%>
+          <%= button_to 'Add to cart', line_items_path(product_id: product.id), class: 'btn btn-dark' %>
+        <%else %>
+          <%= button_to 'Checkout', orders_path, class: 'btn btn-dark' %>
+        <%end%>
+      <%end%>
+    </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

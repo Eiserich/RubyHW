@@ -1,0 +1,38 @@
+<% if current_user %>
+  <br>
+  <h2>History of your orders:</h2>
+  <% @orders.each do |order| %>
+    <%= link_to 'Order #', order_paid_path(order) %> <%= order.id %>
+    <br>
+    <table class='table'>
+      <tr>
+        <th>#</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+      <% order.cart.line_items.each_with_index do |line_item, index| %>
+        <tr>
+          <td><%= index+1 %></td>
+          <td><%= image_tag image_url(line_item.product.image), height: 100, width: 100 %> </td>
+          <td><%= line_item.product.name %></td>
+          <td><%= line_item.quantity %></td>
+          <td><%= number_to_currency line_item.line_item_total_price %></td>
+          <td><%= order.status %></td>
+          <td></td>
+        </tr>
+      <% end %>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <th>Order price: <%= number_to_currency order.cart.total_price %></th>
+    </table>
+  <% end %>
+<% else %>
+  <h3>Please Sign In or Sign Up!</h3>
+<% end %>
