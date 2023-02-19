@@ -1,0 +1,33 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id          :bigint           not null, primary key
+#  description :text
+#  image       :string
+#  name        :string
+#  price       :decimal(, )
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  category_id :bigint
+#
+# Indexes
+#
+#  index_products_on_category_id  (category_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (category_id => categories.id)
+#
+
+one:
+  name: MyString
+  description: MyText
+  price: 9.99
+  image: MyString
+
+two:
+  name: MyString
+  description: MyText
+  price: 9.99
+  image: MyString

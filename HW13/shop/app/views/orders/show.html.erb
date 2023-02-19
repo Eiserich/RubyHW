@@ -1,0 +1,39 @@
+<% if current_user %>
+    <h3>Order #<%= @order.id %></h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th></th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @order.cart.line_items.each_with_index do |line_item, index| %>
+          <tr>
+            <td><%= index + 1 %></td>
+            <th scope="row">
+              <% if line_item.product.image.attached? %>
+                <%= image_tag line_item.product.image, height: 80, height: 80 %>
+              <% else %>
+                <p> No image </p>
+              <% end %></th>
+            <td><%= line_item.product.name %></td>
+            <td><%= line_item.quantity %></td>
+            <td><%= number_to_currency(line_item.product.price) %></td>
+            <td><%= number_to_currency line_item.line_item_total_price %></td>
+          </tr>
+        <% end %>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <th>Order price: <%= number_to_currency(@order.cart.total_price) %></th>
+        </tbody>
+      </table>
+      <%= button_to 'Proceed to payment', order_paid_path, method: :patch, class: "btn btn-dark" %>
+<% end %>

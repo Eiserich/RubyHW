@@ -1,0 +1,26 @@
+<div class="row">
+  <%= render partial: "layouts/template/breadcrumb", locals: { breadcrumb: @product.category } %>
+</div>
+
+<div class='card mb-3' style='max-width: 900px;'>
+  <div class='row g-0'>
+    <div class='col-md-4'>
+      <%=image_tag @product.image.variant(:normal)%>
+    </div>
+    <div class='col-md-8'>
+      <div class='card-body'>
+        <h3 class='text-center'><%= @product.name %></h3>
+        <p class='card-text'><%= @product.description %></p>
+        <p class='text-end'><i>Category: <%= @product.category.title %></i></p>
+        <p class='card-text'><h4 style='color:#d63384; text-align:right'>Price: <%= number_to_currency(@product.price) %></h4></p>
+        <% if current_user %>
+          <%if !current_cart.line_items.where(product_id: @product.id).present?%>
+            <%= button_to 'Add to cart', line_items_path(product_id: @product.id), class: 'btn btn-dark' %>
+          <%else %>
+            <%= button_to 'Checkout', orders_path, class: 'btn btn-dark' %>
+          <%end%>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>

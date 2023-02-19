@@ -1,0 +1,28 @@
+<div class='container'>
+  <h1> <%= @user.email %>, thank you for your order.</h1>
+  <p>
+    Your order #<%= @order.id %> has been successfully paid.<br>
+  </p>
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+    <% @order.cart.line_items.each do |line_item|%>
+      <tr>
+        <th><%= image_tag line_item.product.image.variant(:norm)  if line_item.product.image.attached?%></th>
+        <th><%= line_item.product.name%></th>
+        <th><%= line_item.quantity%></th>
+        <th><%= number_to_currency(line_item.product.price)%></th>
+      </tr>
+    <%end%>
+    <tr>
+      <th></th>
+      <th> Total price order:  </th>
+      <th></th>
+      <th><%= number_to_currency(@order.cart.total_price) %></th>
+    </tr>
+  </table>
+</div>
