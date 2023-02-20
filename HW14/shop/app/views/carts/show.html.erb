@@ -1,0 +1,45 @@
+<% if current_user %>
+  <% if current_cart.line_items.exists? %>
+        <table class="table">
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Delete</th>
+            <th>Price</th>
+          </tr>
+          <% current_cart.line_items.each do |line_item| %>
+            <tr>
+              <td>
+                <% if line_item.product.image.attached? %>
+                  <%= image_tag line_item.product.image, height: 80, height: 80 %>
+                <% else %>
+                  <p> No image </p>
+                <% end %>
+              </td>
+              <td><%= line_item.product.name %></td>
+              <td>
+                <%= button_to "-", line_item_path(:id => line_item), params: { act: 'decrease' }, method: :put, class: "btn btn-dark" %>
+                <%= line_item.quantity %>
+                <%= button_to "+", line_item_path(:id => line_item), params: { act: 'increase' }, method: :put, class: "btn btn-dark" %>
+              </td>
+              <td>
+                <%=button_to "x", line_item_path(:id => line_item), method: :delete, class: "btn btn-dark" %>
+                  </td>
+              <td><%= number_to_currency line_item.line_item_total_price%></td>
+            </tr>
+          <% end %>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <th>Total price: <%= number_to_currency current_cart.total_price %></th>
+        </table>
+      </div>
+      <div>
+        <%= button_to 'Checkout', orders_path, class: "btn btn-dark"%>
+      </div>
+  <% else %>
+    <h1>Your cart is empty</h1>
+  <% end %>
+<% end %>
