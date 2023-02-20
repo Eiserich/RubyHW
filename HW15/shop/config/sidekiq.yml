@@ -1,0 +1,16 @@
+# ---
+# :concurrency: 1
+# staging:
+#   :concurrency: 1
+# development:
+#   :concurrency: 1
+# production:
+#   :concurrency: 1
+:max_retries: 1
+:scheduler:
+  :schedule:
+    sale_worker:
+      cron: '0 0 1 * *'
+      class: "SaleWorker"
+      queue: "default"
+      description: "Run service chosee two user winner"
